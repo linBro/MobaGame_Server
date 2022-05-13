@@ -8,6 +8,8 @@ local httpd = require "http.httpd"
 local sockethelper = require "http.sockethelper"
 
 local arg = table.pack(...)
+print("ip"..arg[1]);
+print("port"..arg[2]);
 assert(arg.n <= 2)
 local ip = (arg.n == 2 and arg[1] or "127.0.0.1")
 local port = tonumber(arg[arg.n])
